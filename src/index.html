@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<h1>Hello World</h1>
+
+	<button id="abrir-modal">Abrir Carrinho</button>
+
+	<div class="box">
+		<div class="branco">
+			<div class="header">
+				<h2>Branco</h2>
+			</div>
+
+			<button id="fechar">Close Me Please daddy!</button>
+		</div>
+	</div>
+
+	<script>
+
+		var abrirModal = document.querySelector('#abrir-modal')
+
+		abrirModal.addEventListener('click', function () {
+			document.querySelector('.box').classList.toggle('show')
+		})
+
+		var fechar = document.querySelector('#fechar')
+
+		fechar.addEventListener('click', function () {
+			document.querySelector('.box').classList.toggle('show')
+		})
+
+
+	</script>
+</body>
+</html>
