@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="index.css">
-</head>
-<body>
-	<h1>Hello World</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>Hello World</h1>
 
-	<button id="abrir-modal">Abrir Carrinho</button>
+    <button id="open-modal">Open sidebar</button>
 
-	<div class="box">
-		<div class="branco">
-			<div class="header">
-				<h2>Branco</h2>
-			</div>
+    <div class="box">
+      <div class="branco">
+        <div class="header">
+          <h2>Content</h2>
+          <button id="close">Close</button>
+        </div>
+      </div>
+    </div>
 
-			<button id="fechar">Close Me Please daddy!</button>
-		</div>
-	</div>
+    <script>
+      var openModal = document.querySelector("#open-modal");
 
-	<script>
+      openModal.addEventListener("click", function () {
+        document.querySelector(".box").classList.toggle("show");
+      });
 
-		var abrirModal = document.querySelector('#abrir-modal')
+      var close = document.querySelector("#close");
 
-		abrirModal.addEventListener('click', function () {
-			document.querySelector('.box').classList.toggle('show')
-		})
-
-		var fechar = document.querySelector('#fechar')
-
-		fechar.addEventListener('click', function () {
-			document.querySelector('.box').classList.toggle('show')
-		})
-
-
-	</script>
-</body>
+      close.addEventListener("click", function () {
+        document.querySelector(".box").classList.toggle("show");
+      });
+    </script>
+  </body>
 </html>
